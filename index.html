@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css"> <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Programming 2021 — Course Exposition</title>
+</head>
+<body>
+  
+  <header class="page-header">
+    <h1 class="page-title">Programming 2021</h1>
+    <p classs="page-subtitle">Course sampler, overview & reference</p>
+  </header>
+  
+  <main>
+    
+    <article id="lesson-one" class="lesson shadow-large">
+      <div class="lesson-body">
+        <header class="lesson-header">
+          <h2><span class="numeral">1</span> Variables</h2>
+          <p class="subtitle">Selecting HTML Elements</p>
+        </header>
+        
+        <!-- Counter Widget -->
+        <div class="widget-container">
+          <article id="counter" class="green widget shadow-medium rounded">
+            <header class="widget-header">
+              <h3 class="widget-title">Counter</h3>
+              <a href="/" class="widget-code">code</a>
+            </header>
+            <section id="counter-body" class="widget-body">
+              <p id="counter-body-number">0</p>
+              <section id="counter-body-buttons">
+                <button class="counter-body-button rounded shadow-small" id="counter-body-button-increment">+</button>
+                <button class="counter-body-button rounded shadow-small" id="counter-body-button-decrement">–</button>  
+              </section>
+            </section>
+          </article>
+          <aside class="widget-description">
+            <p>Variables not only let's us save and refer back to values, they also afford selection & manipulation of HTML elements.</p>
+          </aside>
+        </div>
+      </div>
+      
+    </article>
+    
+    <article id="lesson-two" class="lesson shadow-large">
+      
+      <div class="lesson-body">
+        <header class="lesson-header">
+          <h2><span class="numeral">2</span> Conditionals</h2>
+          <p class="subtitle">Taking Desicions for & with the User</p>
+        </header>
+        
+        <!-- Form Validation Widget -->
+        <div class="widget-container">
+          <article id="form-validation" class="widget shadow-medium yellow rounded">
+            <header class="widget-header">
+              <h3 class="widget-title">Form Validation</h3>
+              <a href="/" class="widget-code">code</a>
+            </header>
+            <section class="widget-body"> 
+              <form id="form-validation-form" autocomplete="off">
+                <div class="widget-input-group">
+                  <label class="widget-input-label" for="username">username</label>
+                  <input type="text" name="username" class="widget-input-text rounded  shadow-small" id="form-validation-username">
+                  <p class="widget-input-feedback" id="form-validation-feedback-username">Your username should be at least 5 characters.</p>
+                </div>
+                <div class="widget-input-group">
+                  <label class="widget-input-label" for="password">password</label>
+                  <input type="password" name="password" class="widget-input-text rounded  shadow-small" id="form-validation-password">
+                  <p class="widget-input-feedback" id="form-validation-feedback-password">Your password should be between 10 and 20 characters.</p>
+                </div>
+                <input type="button" value="Submit" class="widget-input-button-large rounded  shadow-small" id="form-validation-submit" disabled=true>
+              </form>
+            </section>
+          </article>
+          <aside class="widget-description">
+            <p>Conditional statements let's us take desicions based on the state of the program, allowing us to dynamically respond to user input.</p>
+          </aside>
+        </div>
+      </div>
+    </article>
+    
+    <article id="lesson-three" class="lesson shadow-large">
+      <div class="lesson-body">
+        <header class="lesson-header">
+          <h2><span class="numeral">3</span> Functions</h2>
+          <p class="subtitle">Abstracting & Naming Functionality</p>
+        </header>
+        
+        <!-- Dingo Widget -->
+        <div class="widget-container">
+          <article class="red widget shadow-medium rounded">
+            <header class="widget-header">
+              <h3 class="widget-title">Objecto</h3>
+              <a href="/" class="widget-code">code</a>
+            </header>
+            <section class="widget-body">
+            </section>
+          </article>
+          <aside class="widget-description">
+            <p>Variables not only let's us save and refer back to values, they also afford selection & manipulation of HTML elements.</p>
+          </aside>
+        </div>
+      </div>
+    </article>
+  </article>
+  
+  <article id="lesson-four" class="lesson shadow-large">
+    <div class="lesson-body">
+      <header class="lesson-header">
+        <h2><span class="numeral">4</span> Arrays & Loops</h2>
+        <p class="subtitle">Sequential Data</p>
+      </header>
+      
+      <!-- Color Widget -->
+      <div class="widget-container">
+        <article id="color-generator" class="widget shadow-medium gray rounded">
+          
+          <header class="widget-header">
+            <h3 class="widget-title">Tint Generator</h3>
+            <a href="/" class="widget-code">code</a>
+          </header>
+          
+          <section class="widget-body">
+            <div id="color-generator-picker">
+              <section id="color-generator-inputs">
+                <div class="color-generator-input-group">
+                  <label class="widget-input-label shadow-small" for="red">Red</label>
+                  <input min="0" max="255" type="range" name="red" class="color-generator-input rounded shadow-small" value="50" step="1">  
+                </div>
+                <div class="color-generator-input-group">
+                  <label class="widget-input-label" for="green">Green</label>
+                  <input min="0" max="255" type="range" name="green" class="color-generator-input rounded shadow-small" value="50" step="1">  
+                </div>
+                <div class="color-generator-input-group">
+                  <label class="widget-input-label" for="blue">Blue</label>
+                  <input min="0" max="255" type="range" name="blue" class="color-generator-input rounded shadow-small" value="110" step="1">  
+                </div>
+              </section>
+              <color class="color-generator-swatch shadow-medium" id="color-generator-primary-color"></color>
+            </div>
+            
+            <section id="color-generator-swatches">
+              <color class="color-generator-swatch shadow-medium"></color>
+              <color class="color-generator-swatch shadow-medium"></color>
+              <color class="color-generator-swatch shadow-medium"></color>
+              <color class="color-generator-swatch shadow-medium"></color>
+            </section>
+          </section>
+        </article>
+        <aside class="widget-description">
+          <p>Arrays & loops let's us adress & manipulate multiple elements, treating groups as simple sequences of data.</p>
+        </aside>
+      </div>
+    </div>
+  </article>
+  
+  <article id="lesson-five" class="lesson shadow-large">
+    <section class="lesson-body">
+      <header class="lesson-header">
+        <h2><span class="numeral">5</span> Objects</h2>
+        <p class="subtitle">Abstracting & Naming Functionality</p>
+      </header>
+      
+      <!-- Contact Card Widget -->
+      <div class="widget-container">
+          <article class="blue widget shadow-medium rounded" id="contact-card">
+
+              <header class="widget-header">
+                  <h3 class="widget-title">Contact Card</h3>
+                  <a href="/" class="widget-code">code</a>
+              </header>
+
+              <section class="widget-body">
+
+                  <section id="contact-card-input">
+                      <select id="contact-card-dropdown" class="rounded shadow-medium" name="contact">
+                          <option value="bill">Bill Buxton</option>
+                          <option value="lucy" selected="true">Lucy Suchman</option>
+                          <option value="wendy">Wendy Hui Kyong Chun</option>
+                          <option value="william">William Gaver</option>
+                      </select>
+                  </section>
+
+                  <section id="contact-card-body">
+                      <div class="contact-card-avatar shadow-medium"></div>
+                      <h4 id="contact-card-name">Lucy Suchman</h4>
+                      <p id="contact-card-workplace">Xerox Parc</p>
+                      <section class="contact-card-metadata">
+                          <p id="contact-card-note">HCI Anthropologist Emeritus</p>
+                          <p id="contact-card-email">turbocopier@example.com</p>
+                          <p id="contact-card-phone">818-945-6284</p>
+                      </section>
+                  </section>
+
+              </section>
+          </article>
+          <aside class="widget-description">
+              <p>Objects & key-value data structures let us deal with complex data in a way that is more managable for humans.</p>
+          </aside>
+      </div>
+      </div>
+      
+    </section>
+  </article>
+
+  </main>
+
+</body>
+</html>

@@ -111,6 +111,16 @@ h1 {
   font: 300 50pt degular-display, sans-serif;
 }
 
+select {
+    width: 100%;
+    border-width: 0;
+    padding: var(--space-quarter);
+    margin: var(--space-quarter) 0;
+    font: 600 14px "degular-text";
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 .lesson {
   display: flex;
   background-color: var(--lesson-background);
@@ -140,8 +150,15 @@ h1 {
 
 /* Helpers */
 
+.hbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-half);
+}
+
 .rounded { 
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 .shadow-large {
@@ -197,53 +214,54 @@ h1 {
   text-transform: uppercase;
   align-items: center;
   letter-spacing: 1px;
-  padding: 15px 20px;
+  padding: 15px var(--space-half);
   border-radius: 10px 10px 0 0;
 }
 
 .widget-body {
-  padding: 20px;
+    padding: var(--space-half);
 }
 
 .widget-title {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .widget-code {
-  font-size: 12px;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 5px;
+    display: none;
 }
 
 .widget-input-label {
-  font: 500 10pt degular-text, sans-serif;
-  text-transform: uppercase;
+    font: 500 10pt degular-text, sans-serif;
+    text-transform: uppercase;
 }
 
 .widget-input-text {
-  background-color: var(--lesson-background);
-  width: 100%;
-  border: none;
-  font: 600 14px "degular-text";
-  padding: var(--space-quarter);
-  margin: var(--space-quarter) 0;
+    background-color: var(--lesson-background);
+    width: 100%;
+    border: none;
+    font: 600 14px "degular-text";
+    padding: var(--space-quarter);
+    margin: var(--space-quarter) 0;
 }
 
 .widget-input-feedback {
-  font: 500 12px "degular-text";
-  margin-bottom: var(--space-half);
+    font: 500 12px "degular-text";
+    margin-bottom: var(--space-half);
 }
 
 .widget-input-error {
-  color: var(--error);
+    color: var(--error);
 }
 
 .widget-input-button-large {
-  width: 100%;
-  padding: var(--space-quarter);
-  border-width: 0;
-  font: 500 12pt degular-text, sans-serif;
+    width: 100%;
+    padding: var(--space-quarter);
+    border-width: 0;
+    font: 500 12pt degular-text, sans-serif;
 }
 
 
@@ -254,119 +272,185 @@ h1 {
 .gray   { background-color: var(--gray1);   }
 .blue   { background-color: var(--blue1);   }
 .red    { background-color: var(--red1);    }
+.pink   { background-color: var(--pink1);    }
 
 /* Counter */
 
 #counter-body {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-left: var(--space-quarter);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-left: var(--space-quarter);
 }
 
 #counter .widget-header {
-  background-color: var(--green0);
+    background-color: var(--green0);
 }
 
 #counter .widget-code:hover {
-  background-color: var(--green3);
+    background-color: var(--green3);
 }
 
 #counter-body-number {
-  font-size: 72px;
-  font-weight: 300;
-  font-family: degular-display, sans-serif;
+    font-size: 72px;
+    font-weight: 300;
+    font-family: degular-display, sans-serif;
 }
 
 #counter-body-buttons {
-  width: 90px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+    width: 90px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .counter-body-button {
-  background-color: var(--green2);
-  border-width: 0px;
-  padding: 3px 11px;
-  font-size: 24px;
-
+    background-color: var(--green2);
+    border-width: 0px;
+    padding: 3px 11px;
+    font-size: 24px;
 }
 
 .counter-body-button:hover {
-  background: var(--green3);
-  cursor: pointer;
+    background: var(--green3);
+    cursor: pointer;
 }
 
 #counter-body-button-increment {
-  padding-bottom: 3px;
-  padding-top: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
 }
 
 #counter-body-button-decrement {
-  padding-bottom: 6px;
-  padding-top: 1px;
+    padding-bottom: 6px;
+    padding-top: 1px;
 }
 
 
 /* Form Validation */
 
 #form-validation .widget-header {
-  background-color: var(--yellow0);
+    background-color: var(--yellow0);
 }
 
 #form-validation .widget-input-text {
-  background-color: var(--yellow2);
+    background-color: var(--yellow2);
 }
 
 #form-validation .widget-code:hover {
-  background-color: var(--yellow3);
+    background-color: var(--yellow3);
 }
 
 #form-validation .widget-input-text:focus {
-  background-color: var(--yellow3);
+    background-color: var(--yellow3);
 }
 
 #form-validation-feedback-password {
-  margin-bottom: var(--space-quarter);
+    margin-bottom: var(--space-quarter);
 }
 
 #form-validation .widget-input-button-large {
-  background-color: var(--yellow2);
-  margin-top: var(--space-full);
+    background-color: var(--yellow2);
+    margin-top: var(--space-full);
 }
 
 #form-validation .widget-input-button-large:hover {
-  background-color: var(--yellow3);
-  cursor: pointer;
+    background-color: var(--yellow3);
+    cursor: pointer;
 }
 
 #form-validation .widget-input-button-large:disabled {
-  background-color: var(--yellow2);
-  cursor: not-allowed;
+    background-color: var(--yellow2);
+    cursor: not-allowed;
 }
 
+
+/* DOM Manipulation */
+
+#dom-manipulation .widget-header {
+    background-color: var(--red0);
+}
+
+#dom-mainpulation-input-element {
+    background: var(--red2);
+}
+
+#dom-manipulation-input {
+    align-items: flex-end;
+}
+
+#dom-manipulation-input-text {
+    background-color: var(--red2);
+    margin-bottom: 0;
+}
+
+#dom-manipulation-input-button {
+    background-color: var(--red2);
+    max-width: 70px;
+}
+
+#dom-manipulation-input-button:hover {
+    background-color: var(--red3);
+    cursor: pointer;
+}
+
+#dom-manipulation-todo {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--space-full);
+}
+
+#dom-manipulation-todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-eight);
+}
+
+#dom-manipulation-todo-list li {
+    margin: 0;
+    list-style: none;
+    padding: 8px 0 12px 3px;
+    font: 500 15px degular-text, sans-serif;
+    border: 2px solid var(--red2);
+    border-width: 0 0 2px 0;
+}
+
+
+#dom-manipulation-todo-list li:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+#dom-manipulation-todo-list li:last-of-type {
+    border-width: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#dom-manipulation-todo-list li:hover {
+    text-decoration: line-through;
+    cursor: pointer;
+}
 
 /* Color Generator */
 
 #color-generator .widget-header {
-  background-color: var(--gray0);
+    background-color: var(--gray0);
 }
 
 #color-generator .widget-input-text {
-  background-color: white;
+    background-color: white;
 }
 
 #color-generator-picker {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
 .color-generator-input-group {
-  width: 100%;
-  margin-bottom: var(--space-quarter)
+    width: 100%;
+    margin-bottom: var(--space-quarter)
 }
 
 .color-generator-input {
@@ -374,24 +458,24 @@ h1 {
 }
 
 #color-generator-primary-color {
-  margin-left: var(--space-half)
+    margin-left: var(--space-half)
 }
 
 #color-generator-swatches {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  height: 275px;
-  margin-top: var(--space-full);
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 275px;
+    margin-top: var(--space-full);
 }
 
 .color-generator-swatch {
-  width: 110px;
-  height: 110px;
-  border-radius: 9999px;
-  background-color: var(--lesson-background);
+    width: 110px;
+    height: 110px;
+    border-radius: 9999px;
+    background-color: var(--lesson-background);
 }
 
 /* Contact Card */
@@ -401,14 +485,7 @@ h1 {
 }
 
 #contact-card-dropdown {
-    width: 100%;
-    border-width: 0;
     background: var(--blue2);
-    padding: var(--space-quarter);
-    margin: var(--space-quarter) 0;
-    font: 600 14px "degular-text";
-    -webkit-appearance: none;
-    appearance: none;
 }
 
 #contact-card-body {

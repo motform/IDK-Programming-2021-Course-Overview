@@ -11,7 +11,7 @@
   
   <header class="page-header">
     <h1 class="page-title">Programming 2021</h1>
-    <p classs="page-subtitle">Course sampler, overview & reference</p>
+    <p classs="page-subtitle">Workshop sampler, overview & reference</p>
   </header>
   
   <main>
@@ -28,7 +28,7 @@
           <article id="counter" class="green widget shadow-medium rounded">
             <header class="widget-header">
               <h3 class="widget-title">Counter</h3>
-              <a href="/" class="widget-code">code</a>
+              <a href="/workshops/variables/" class="widget-code">code</a>
             </header>
             <section id="counter-body" class="widget-body">
               <p id="counter-body-number">0</p>
@@ -43,11 +43,9 @@
           </aside>
         </div>
       </div>
-      
     </article>
     
     <article id="lesson-two" class="lesson shadow-large">
-      
       <div class="lesson-body">
         <header class="lesson-header">
           <h2><span class="numeral">2</span> Conditionals</h2>
@@ -91,124 +89,170 @@
           <p class="subtitle">Abstracting & Naming Functionality</p>
         </header>
         
-        <!-- Dingo Widget -->
+        <!-- DOM Manipulation -->
         <div class="widget-container">
-          <article class="red widget shadow-medium rounded">
+          <article id="dom-manipulation" class="red widget shadow-medium rounded">
             <header class="widget-header">
-              <h3 class="widget-title">Objecto</h3>
+              <h3 class="widget-title">DOM Manipulation</h3>
               <a href="/" class="widget-code">code</a>
             </header>
+            
             <section class="widget-body">
+              
+              <section id="dom-manipulation-input" class="hbox">
+                <div class="">
+                  <label class="widget-input-label">New TODO Item</label>
+                  <input type="text" name="username" class="widget-input-text rounded shadow-small" id="dom-manipulation-input-text">
+                </div>
+                <button class="widget-input-button-large rounded shadow-small" id="dom-manipulation-input-button">Add</button>
+              </section>
+              
+              <section id="dom-manipulation-todo" class="">
+                <ul id="dom-manipulation-todo-list">
+                  <li>Learn Javascript</li>
+                  <li>Burn Javascript</li>
+                </ul>
+              </section>
             </section>
           </article>
           <aside class="widget-description">
-            <p>Variables not only let's us save and refer back to values, they also afford selection & manipulation of HTML elements.</p>
+            <p>The browser comes with a library of functions that let us manipulate, add or remote items, to the page by interfacing with the DOM.</p>
           </aside>
         </div>
       </div>
     </article>
-  </article>
-  
-  <article id="lesson-four" class="lesson shadow-large">
-    <div class="lesson-body">
-      <header class="lesson-header">
-        <h2><span class="numeral">4</span> Arrays & Loops</h2>
-        <p class="subtitle">Sequential Data</p>
-      </header>
-      
-      <!-- Color Widget -->
-      <div class="widget-container">
-        <article id="color-generator" class="widget shadow-medium gray rounded">
-          
-          <header class="widget-header">
-            <h3 class="widget-title">Tint Generator</h3>
-            <a href="/" class="widget-code">code</a>
-          </header>
-          
-          <section class="widget-body">
-            <div id="color-generator-picker">
-              <section id="color-generator-inputs">
-                <div class="color-generator-input-group">
-                  <label class="widget-input-label shadow-small" for="red">Red</label>
-                  <input min="0" max="255" type="range" name="red" class="color-generator-input rounded shadow-small" value="50" step="1">  
-                </div>
-                <div class="color-generator-input-group">
-                  <label class="widget-input-label" for="green">Green</label>
-                  <input min="0" max="255" type="range" name="green" class="color-generator-input rounded shadow-small" value="50" step="1">  
-                </div>
-                <div class="color-generator-input-group">
-                  <label class="widget-input-label" for="blue">Blue</label>
-                  <input min="0" max="255" type="range" name="blue" class="color-generator-input rounded shadow-small" value="110" step="1">  
-                </div>
-              </section>
-              <color class="color-generator-swatch shadow-medium" id="color-generator-primary-color"></color>
-            </div>
+    
+    <article id="lesson-four" class="lesson shadow-large">
+      <div class="lesson-body">
+        <header class="lesson-header">
+          <h2><span class="numeral">4</span> Arrays & Loops</h2>
+          <p class="subtitle">Sequential Data</p>
+        </header>
+        
+        <!-- Color Widget -->
+        <div class="widget-container">
+          <article id="color-generator" class="widget shadow-medium gray rounded">
             
-            <section id="color-generator-swatches">
-              <color class="color-generator-swatch shadow-medium"></color>
-              <color class="color-generator-swatch shadow-medium"></color>
-              <color class="color-generator-swatch shadow-medium"></color>
-              <color class="color-generator-swatch shadow-medium"></color>
-            </section>
-          </section>
-        </article>
-        <aside class="widget-description">
-          <p>Arrays & loops let's us adress & manipulate multiple elements, treating groups as simple sequences of data.</p>
-        </aside>
-      </div>
-    </div>
-  </article>
-  
-  <article id="lesson-five" class="lesson shadow-large">
-    <section class="lesson-body">
-      <header class="lesson-header">
-        <h2><span class="numeral">5</span> Objects</h2>
-        <p class="subtitle">Abstracting & Naming Functionality</p>
-      </header>
-      
-      <!-- Contact Card Widget -->
-      <div class="widget-container">
-          <article class="blue widget shadow-medium rounded" id="contact-card">
-
-              <header class="widget-header">
-                  <h3 class="widget-title">Contact Card</h3>
-                  <a href="/" class="widget-code">code</a>
-              </header>
-
-              <section class="widget-body">
-
-                  <section id="contact-card-input">
-                      <select id="contact-card-dropdown" class="rounded shadow-medium" name="contact">
-                          <option value="bill">Bill Buxton</option>
-                          <option value="lucy" selected="true">Lucy Suchman</option>
-                          <option value="wendy">Wendy Hui Kyong Chun</option>
-                          <option value="william">William Gaver</option>
-                      </select>
-                  </section>
-
-                  <section id="contact-card-body">
-                      <div class="contact-card-avatar shadow-medium"></div>
-                      <h4 id="contact-card-name">Lucy Suchman</h4>
-                      <p id="contact-card-workplace">Xerox Parc</p>
-                      <section class="contact-card-metadata">
-                          <p id="contact-card-note">HCI Anthropologist Emeritus</p>
-                          <p id="contact-card-email">turbocopier@example.com</p>
-                          <p id="contact-card-phone">818-945-6284</p>
-                      </section>
-                  </section>
-
+            <header class="widget-header">
+              <h3 class="widget-title">Tint Generator</h3>
+              <a href="/" class="widget-code">code</a>
+            </header>
+            
+            <section class="widget-body">
+              <div id="color-generator-picker">
+                <section id="color-generator-inputs">
+                  <div class="color-generator-input-group">
+                    <label class="widget-input-label shadow-small" for="red">Red</label>
+                    <input min="0" max="255" type="range" name="red" class="color-generator-input rounded shadow-small" value="50" step="1">  
+                  </div>
+                  <div class="color-generator-input-group">
+                    <label class="widget-input-label" for="green">Green</label>
+                    <input min="0" max="255" type="range" name="green" class="color-generator-input rounded shadow-small" value="50" step="1">  
+                  </div>
+                  <div class="color-generator-input-group">
+                    <label class="widget-input-label" for="blue">Blue</label>
+                    <input min="0" max="255" type="range" name="blue" class="color-generator-input rounded shadow-small" value="110" step="1">  
+                  </div>
+                </section>
+                <color class="color-generator-swatch shadow-medium" id="color-generator-primary-color"></color>
+              </div>
+              
+              <section id="color-generator-swatches">
+                <color class="color-generator-swatch shadow-medium"></color>
+                <color class="color-generator-swatch shadow-medium"></color>
+                <color class="color-generator-swatch shadow-medium"></color>
+                <color class="color-generator-swatch shadow-medium"></color>
               </section>
+            </section>
           </article>
           <aside class="widget-description">
-              <p>Objects & key-value data structures let us deal with complex data in a way that is more managable for humans.</p>
+            <p>Arrays & loops let's us adress & manipulate multiple elements, treating groups as simple sequences of data.</p>
           </aside>
+        </div>
       </div>
+    </article>
+    
+    <article id="lesson-five" class="lesson shadow-large">
+      <div class="lesson-body">
+        <header class="lesson-header">
+          <h2><span class="numeral">5</span> Objects</h2>
+          <p class="subtitle">Abstracting & Naming Functionality</p>
+        </header>
+        
+        <!-- Contact Card Widget -->
+        <div class="widget-container">
+          <article class="blue widget shadow-medium rounded" id="contact-card">
+            
+            <header class="widget-header">
+              <h3 class="widget-title">Contact Card</h3>
+              <a href="/" class="widget-code">code</a>
+            </header>
+            
+            <section class="widget-body">
+              
+              <section id="contact-card-input">
+                <select id="contact-card-dropdown" class="rounded shadow-medium" name="contact">
+                  <option value="bill">Bill Buxton</option>
+                  <option value="lucy" selected="true">Lucy Suchman</option>
+                  <option value="wendy">Wendy Hui Kyong Chun</option>
+                  <option value="william">William Gaver</option>
+                </select>
+              </section>
+              
+              <section id="contact-card-body">
+                <div class="contact-card-avatar shadow-medium"></div>
+                <h4 id="contact-card-name">Lucy Suchman</h4>
+                <p id="contact-card-workplace">Xerox Parc</p>
+                <section class="contact-card-metadata">
+                  <p id="contact-card-note">HCI Anthropologist Emeritus</p>
+                  <p id="contact-card-email">turbocopier@example.com</p>
+                  <p id="contact-card-phone">818-945-6284</p>
+                </section>
+              </section>
+              
+            </section>
+          </article>
+          <aside class="widget-description">
+            <p>Objects & key-value data structures let us deal with complex data in a way that is more managable for humans.</p>
+          </aside>
+        </div>
       </div>
-      
-    </section>
-  </article>
+    </article>
+    
+    <article id="lesson-six" class="lesson shadow-large">
+        <div class="lesson-body">
+            <header class="lesson-header">
+                <h2><span class="numeral">6</span> Events</h2>
+                <p class="subtitle">Interacting with user input</p>
+            </header>
+            
+            <!-- Contact Card Widget -->
+            <div class="widget-container">
+                <article class="pink widget shadow-medium rounded" id="">
+                    
+                    <header class="widget-header">
+                        <h3 class="widget-title">Event Thing</h3>
+                        <a href="/" class="widget-code">code</a>
+                    </header>
+                    
+                    <section class="widget-body">
+                        
+                        <section id="contact-card-input">
+                        </section>
+                        
+                        <section id="contact-card-body">
+                        </section>
+                    </section>
+                </article>
+                <aside class="widget-description">
+                    <p>Events are the primarly mechanism for dispatching on user input. Effectievly, it let's us program input over time.</p>
+                </aside>
+            </div>
+        </div>
+    </article>
 
+    
   </main>
-
+  
 </body>
 </html>

@@ -5,26 +5,27 @@
 
 "use strict";
 
+
 /* Varirables - Counter */
 
 let buttonIncrement = document.querySelector("#counter-body-button-increment");
 let buttonDecrement = document.querySelector("#counter-body-button-decrement");
 let counterNumber   = document.querySelector("#counter-body-number");
 
-buttonIncrement.onclick = function() {
+buttonIncrement.addEventListener("click", function() {
   let oldNumber = Number.parseInt(counterNumber.innerHTML); 
   let newNumber = oldNumber + 1;
   counterNumber.innerHTML = newNumber;
-}
+});
 
-buttonDecrement.onclick = function() {
+buttonIncrement.addEventListener("click", function() {
   let oldNumber = Number.parseInt(counterNumber.innerHTML);
   let newNumber = oldNumber - 1;
   counterNumber.innerHTML = newNumber;
-} 
+});
+
 
 /* Conditions - Form Validation */
-
 
 let inputUsername    = document.querySelector("#form-validation-username");
 let feedbackUsername = document.querySelector("#form-validation-feedback-username");
@@ -36,7 +37,7 @@ let passwordCorrect  = false;
 
 let inputSubmit      = document.querySelector("#form-validation-submit");
 
-// The username input.
+// The username input
 inputUsername.addEventListener("input", function(event) {
   let userInput = event.target.value; // This is how we get the thing the user changed.
 
@@ -55,7 +56,7 @@ inputUsername.addEventListener("input", function(event) {
   }
 });
 
-// The password input.
+// The password input
 inputPassword.addEventListener("input", function(event) {
   let userInput = event.target.value;
 
@@ -76,7 +77,37 @@ inputPassword.addEventListener("input", function(event) {
 });
 
 
-/* Functions - Form Validation */
+/* Functions - DOM Manipulation */
+
+let addTodoButton = document.querySelector("#dom-manipulation-input-button");
+let addTodoInput = document.querySelector("#dom-manipulation-input-text");
+let todoList = document.querySelector("#dom-manipulation-todo-list");
+
+function removeTodoItem(event) {
+  let item = event.target;
+  item.remove();
+}
+
+function addTodoItem(event) {
+  // If the event is a a keyboard input and it is anything but the enter key, return
+  if (event.type === "keyup" && !(event.keyCode === 13)) return; 
+
+  let itemText = addTodoInput.value;
+  let newListItem = document.createElement("li");
+  newListItem.innerHTML = itemText;
+  newListItem.addEventListener("click", removeTodoItem);
+
+  todoList.append(newListItem); 
+  addTodoInput.value = ""; // Reset the input field
+}
+
+addTodoButton.addEventListener("click", addTodoItem);
+addTodoInput.addEventListener("keyup", addTodoItem);
+
+// Add the eventLister to the placeholders
+for (let todoItem of todoList.children) {
+  todoItem.addEventListener("click", removeTodoItem);
+}
 
 
 /* Arrays & Loops */

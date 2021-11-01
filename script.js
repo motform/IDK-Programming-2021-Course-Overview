@@ -18,7 +18,7 @@ buttonIncrement.addEventListener("click", function() {
   counterNumber.innerHTML = newNumber;
 });
 
-buttonIncrement.addEventListener("click", function() {
+buttonDecrement.addEventListener("click", function() {
   let oldNumber = Number.parseInt(counterNumber.innerHTML);
   let newNumber = oldNumber - 1;
   counterNumber.innerHTML = newNumber;
@@ -153,7 +153,6 @@ for (let i = 0; i < colorInputs.length; i++) {
   let amount = 0.1;
   for (let colorSwatch of colorSwatches) {
     let nextTint = tintRGBColor(RGBColor, amount);
-    console.log(nextTint);
     colorSwatch.style.backgroundColor = RGBString(nextTint);
     amount += 0.2;
   }

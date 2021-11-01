@@ -37,6 +37,11 @@
   --gray2:   #bfbfbf;
   --gray3:   #878787;
 
+  --pink0:   #ffa5e6;
+  --pink1:   #ff5cd1;
+  --pink2:   #d94eb2;
+  --pink3:   #99377d;
+
   --error:   #bf3618;
 
   --space-full:    40px;
@@ -516,4 +521,11 @@ select {
 
 #contact-card-note {
     font-style: italic;
+}
+
+
+/* */
+
+#event .widget-header {
+    background-color: var(--pink0);
 }

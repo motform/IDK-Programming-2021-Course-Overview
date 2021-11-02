@@ -1,119 +1,115 @@
 :root {
-  --foreground:        black;
-  --page-background:   #eee;
-  --lesson-background: white;
-  --widget-foreground: black;
-
-  /* 
+    --foreground: black;
+    --page-background: #eee;
+    --lesson-background: white;
+    --widget-foreground: black;
+    /* 
   Tints are Generated with https://noeldelgado.github.io/shadowlord/
   0 - -45%
   1 - 0
   2 - 15%
   3 - 40% 
   */
-
-  --green0:  #b9f8c3;
-  --green1:  #80f391;
-  --green2:  #6dcf7b; 
-  --green3:  #4d9257;
-
-  --yellow0: #fff7ae;
-  --yellow1: #fff06c;
-  --yellow2: #e6d861;
-  --yellow3: #999041;
-
-  --red0:    #fdbbad;
-  --red1:    #fc846a;
-  --red2:    #d6705a;
-  --red3:    #974f40;
-  
-  --blue0:   #b5dbff;
-  --blue1:   #83C3FF;
-  --blue2:   #6fa6d9;
-  --blue3:   #4f7599;
-
-  --gray0:   #efefef;
-  --gray1:   #e1e1e1;
-  --gray2:   #bfbfbf;
-  --gray3:   #878787;
-
-  --pink0:   #ffa5e6;
-  --pink1:   #ff5cd1;
-  --pink2:   #d94eb2;
-  --pink3:   #99377d;
-
-  --error:   #bf3618;
-
-  --space-full:    40px;
-  --space-half:    calc(var(--space-full) / 2);
-  --space-quarter: calc(var(--space-full) / 4);
-  --space-eight:   calc(var(--space-full) / 8);
+    --green0: #b9f8c3;
+    --green1: #80f391;
+    --green2: #6dcf7b;
+    --green3: #4d9257;
+    --yellow0: #fff7ae;
+    --yellow1: #fff06c;
+    --yellow2: #e6d861;
+    --yellow3: #999041;
+    --red0: #fdbbad;
+    --red1: #fc846a;
+    --red2: #d6705a;
+    --red3: #974f40;
+    --blue0: #b5dbff;
+    --blue1: #83C3FF;
+    --blue2: #6fa6d9;
+    --blue3: #4f7599;
+    --gray0: #efefef;
+    --gray1: #e1e1e1;
+    --gray2: #bfbfbf;
+    --gray3: #878787;
+    --pink0: #ffa5e6;
+    --pink1: #ff5cd1;
+    --pink2: #d94eb2;
+    --pink3: #99377d;
+    --error: #bf3618;
+    --space-full: 40px;
+    --space-half: calc(var(--space-full) / 2);
+    --space-quarter: calc(var(--space-full) / 4);
+    --space-eight: calc(var(--space-full) / 8);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: white;
-    --page-background:   #222;
-    --lesson-background: #333;
-  }
+     :root {
+        --foreground: white;
+        --page-background: #222;
+        --lesson-background: #333;
+    }
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-input, select {
+input,
+select {
     display: block;
 }
 
 html {
-  color: var(--foreground);
-  background-color: var(--page-background);
-  -webkit-font-smoothing: antialiased;
-  font-family: degular-text, sans-serif;
-  padding: var(--space-full);
+    color: var(--foreground);
+    background-color: var(--page-background);
+    -webkit-font-smoothing: antialiased;
+    font-family: degular-text, sans-serif;
+    padding: var(--space-full);
 }
 
 main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 60px;
-  width: 100%
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 60px;
+    width: 100%
 }
 
 body {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
 }
 
-h1, h2, h3, h4, h5 {
-  font-weight: inherit;
-  font-family: degular-display, sans-serif;
-  margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: inherit;
+    font-family: degular-display, sans-serif;
+    margin: 0;
 }
 
 h2 {
-  font-size: 72px;
-  line-height: 40px;
-  font-weight: 700;
+    font-size: 72px;
+    line-height: 40px;
+    font-weight: 700;
 }
 
 a {
-  color: var(--foreground);
-  text-decoration: none;
+    color: var(--foreground);
+    text-decoration: none;
 }
 
 .page-header {
-  margin-bottom: var(--space-full);
-  margin-left: var(--space-half);
+    margin-bottom: var(--space-full);
+    margin-left: var(--space-half);
 }
 
 h1 {
-  font: 300 50pt degular-display, sans-serif;
+    font: 300 50pt degular-display, sans-serif;
 }
 
 select {
@@ -127,29 +123,29 @@ select {
 }
 
 .lesson {
-  display: flex;
-  background-color: var(--lesson-background);
-  border-radius: 20px;
+    display: flex;
+    background-color: var(--lesson-background);
+    border-radius: 20px;
 }
 
 .lesson-body {
-  padding: var(--space-full);  
+    padding: var(--space-full);
 }
 
 .lesson-header {
-  margin-bottom: var(--space-full);
+    margin-bottom: var(--space-full);
 }
 
 .subtitle {
-  margin: var(--space-half) 0;
-  font-size: 20px;
-  font-family: degular, sans-serif;
-  font-weight: 500;
+    margin: var(--space-half) 0;
+    font-size: 20px;
+    font-family: degular, sans-serif;
+    font-weight: 500;
 }
 
 .numeral {
-  font-weight: 300;
-  display: none;
+    font-weight: 300;
+    display: none;
 }
 
 
@@ -162,65 +158,50 @@ select {
     gap: var(--space-half);
 }
 
-.rounded { 
+.rounded {
     border-radius: 10px;
 }
 
 .shadow-large {
-  box-shadow:
-    1px 1px 1.9px rgba(0, 0, 0, 0.019),
-    2.6px 2.6px 4.8px rgba(0, 0, 0, 0.027),
-    5.3px 5.3px 9.7px rgba(0, 0, 0, 0.033),
-    11px 11px 20.1px rgba(0, 0, 0, 0.041),
-    30px 30px 55px rgba(0, 0, 0, 0.06);
+    box-shadow: 1px 1px 1.9px rgba(0, 0, 0, 0.019), 2.6px 2.6px 4.8px rgba(0, 0, 0, 0.027), 5.3px 5.3px 9.7px rgba(0, 0, 0, 0.033), 11px 11px 20.1px rgba(0, 0, 0, 0.041), 30px 30px 55px rgba(0, 0, 0, 0.06);
 }
 
 .shadow-medium {
-  box-shadow:
-    1.4px 1.4px 3.2px rgba(0, 0, 0, 0.008),
-    3.3px 3.3px 7.7px rgba(0, 0, 0, 0.012),
-    6.3px 6.3px 14.1px rgba(0, 0, 0, 0.015),
-    11.2px 11.2px 23.9px rgba(0, 0, 0, 0.018),
-    20.9px 20.9px 40px rgba(0, 0, 0, 0.022),
-    50px 50px 80px rgba(0, 0, 0, 0.03);
+    box-shadow: 1.4px 1.4px 3.2px rgba(0, 0, 0, 0.008), 3.3px 3.3px 7.7px rgba(0, 0, 0, 0.012), 6.3px 6.3px 14.1px rgba(0, 0, 0, 0.015), 11.2px 11.2px 23.9px rgba(0, 0, 0, 0.018), 20.9px 20.9px 40px rgba(0, 0, 0, 0.022), 50px 50px 80px rgba(0, 0, 0, 0.03);
 }
 
 .shadow-small {
-  box-shadow:
-    0.5px 0.5px 4.1px rgba(0, 0, 0, 0.01),
-    1.3px 1.3px 10.4px rgba(0, 0, 0, 0.015),
-    3px  3px  25px rgba(0, 0, 0, 0.02),
-    10px 10px 80px rgba(0, 0, 0, 0.03);
+    box-shadow: 0.5px 0.5px 4.1px rgba(0, 0, 0, 0.01), 1.3px 1.3px 10.4px rgba(0, 0, 0, 0.015), 3px 3px 25px rgba(0, 0, 0, 0.02), 10px 10px 80px rgba(0, 0, 0, 0.03);
 }
 
 
 /* Widget styling */
 
 .widget-container {
-  display: flex;
+    display: flex;
 }
 
 .widget-description {
-  font: 500 10pt degular-text, sans-serif;
-  margin-left: var(--space-full);
-  max-width: 200px;
+    font: 500 10pt degular-text, sans-serif;
+    margin-left: var(--space-full);
+    max-width: 200px;
 }
 
 .widget {
-  width: 350px;
-  font-family: degular-text, sans-serif;
-  font-weight: 500;
-  font-size: 14pt;
+    width: 350px;
+    font-family: degular-text, sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
 }
 
 .widget-header {
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  align-items: center;
-  letter-spacing: 1px;
-  padding: 15px var(--space-half);
-  border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+    letter-spacing: 1px;
+    padding: 15px var(--space-half);
+    border-radius: 10px 10px 0 0;
 }
 
 .widget-body {
@@ -272,12 +253,30 @@ select {
 
 /* EXAMPLES */
 
-.green  { background-color: var(--green1);  }
-.yellow { background-color: var(--yellow1); }
-.gray   { background-color: var(--gray1);   }
-.blue   { background-color: var(--blue1);   }
-.red    { background-color: var(--red1);    }
-.pink   { background-color: var(--pink1);    }
+.green {
+    background-color: var(--green1);
+}
+
+.yellow {
+    background-color: var(--yellow1);
+}
+
+.gray {
+    background-color: var(--gray1);
+}
+
+.blue {
+    background-color: var(--blue1);
+}
+
+.red {
+    background-color: var(--red1);
+}
+
+.pink {
+    background-color: var(--pink1);
+}
+
 
 /* Counter */
 
@@ -420,11 +419,11 @@ select {
     border-width: 0 0 2px 0;
 }
 
-
 #dom-manipulation-todo-list li:first-of-type {
     margin-top: 0;
     padding-top: 0;
 }
+
 #dom-manipulation-todo-list li:last-of-type {
     border-width: 0;
     margin-bottom: 0;
@@ -435,6 +434,7 @@ select {
     text-decoration: line-through;
     cursor: pointer;
 }
+
 
 /* Color Generator */
 
@@ -483,6 +483,7 @@ select {
     background-color: var(--lesson-background);
 }
 
+
 /* Contact Card */
 
 #contact-card .widget-header {
@@ -524,8 +525,15 @@ select {
 }
 
 
-/* */
+/* Event — Draggable Widget */
 
 #event .widget-header {
     background-color: var(--pink0);
+    cursor: move;
+}
+
+#event-widget-body {
+    margin-top: var( --space-half);
+    font: 500 13px degular-text, sans-serif;
+    text-transform: uppercase;
 }

@@ -106,15 +106,13 @@ ___.onclick = function() {
 let stringerString = "S";
 let characterInput = document.querySelector("#stringer-input-character");
 
-// You need to make a variable for the button, 
-// add an onclick event set the 
 /*
-___.onclick = function() {
+  ___.onclick = function() {
   let newCharacter = characterInput.value;  // Get the character that is in the input
   ___.innerHTML = ___; // Set the contents of the second button, should be empty
 
   // Set the contents of the first button, should have the ball
   ___.innerHTML = ___;
-    characterInput.value = "";  // Clear the input
-};
+  characterInput.value = "";  // Clear the input
+  };
 */

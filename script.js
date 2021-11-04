@@ -148,7 +148,7 @@ for (let i = 0; i < colorInputs.length; i++) {
     });
 }
 
-// // Run the tinting once to get the starting colors
+// Run the tinting once to get the starting colors
 {
     let amount = 0.1;
     for (let colorSwatch of colorSwatches) {
@@ -178,7 +178,7 @@ let contacts = {
         email: "turbocopies@example.com",
     },
     wendy: {
-        name: "Wendy Hui Kyong Chun",
+        name: "WHK Chun",
         workplace: "Simon Fraser University",
         note: "Media Studies Mastermind",
         phone: "323-288-2299",
@@ -244,7 +244,7 @@ function drag(event) {
         draggableState.offset.x = draggableState.current.x;
         draggableState.offset.y = draggableState.current.y;
 
-        translateElement(draggableState.current, draggableWidget)
+        translateElement(draggableState.current, draggableWidget);
     }
 }
 

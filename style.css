@@ -42,7 +42,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-     :root {
+    :root {
         --foreground: white;
         --page-background: #222;
         --lesson-background: #333;
@@ -55,8 +55,7 @@
     padding: 0;
 }
 
-input,
-select {
+input, select {
     display: block;
 }
 
@@ -82,11 +81,7 @@ body {
     max-width: 1300px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
     font-weight: inherit;
     font-family: degular-display, sans-serif;
     margin: 0;
@@ -109,7 +104,7 @@ a {
 }
 
 h1 {
-    font: 300 50pt degular-display, sans-serif;
+    font: 300 50pt/42pt degular-display, sans-serif;
 }
 
 select {
@@ -148,7 +143,6 @@ select {
     display: none;
 }
 
-
 /* Helpers */
 
 .hbox {
@@ -173,7 +167,6 @@ select {
 .shadow-small {
     box-shadow: 0.5px 0.5px 4.1px rgba(0, 0, 0, 0.01), 1.3px 1.3px 10.4px rgba(0, 0, 0, 0.015), 3px 3px 25px rgba(0, 0, 0, 0.02), 10px 10px 80px rgba(0, 0, 0, 0.03);
 }
-
 
 /* Widget styling */
 
@@ -250,7 +243,6 @@ select {
     font: 500 12pt degular-text, sans-serif;
 }
 
-
 /* EXAMPLES */
 
 .green {
@@ -276,7 +268,6 @@ select {
 .pink {
     background-color: var(--pink1);
 }
-
 
 /* Counter */
 
@@ -330,7 +321,6 @@ select {
     padding-top: 1px;
 }
 
-
 /* Form Validation */
 
 #form-validation .widget-header {
@@ -367,7 +357,6 @@ select {
     background-color: var(--yellow2);
     cursor: not-allowed;
 }
-
 
 /* DOM Manipulation */
 
@@ -435,7 +424,6 @@ select {
     cursor: pointer;
 }
 
-
 /* Color Generator */
 
 #color-generator .widget-header {
@@ -483,7 +471,6 @@ select {
     background-color: var(--lesson-background);
 }
 
-
 /* Contact Card */
 
 #contact-card .widget-header {
@@ -524,7 +511,6 @@ select {
     font-style: italic;
 }
 
-
 /* Event — Draggable Widget */
 
 #event .widget-header {
@@ -536,4 +522,39 @@ select {
     margin-top: var( --space-half);
     font: 500 13px degular-text, sans-serif;
     text-transform: uppercase;
+}
+
+/* Responsive design */
+
+/* Mobile */
+
+@media only screen and (max-width: 480px) {
+    :root {
+        --space-full: 30px;
+    }
+    html {
+        padding: var(--space-half);
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-full);
+    }
+    h1 {
+        font: 300 30pt/30pt degular-display, sans-serif;
+    }
+    h2 {
+        font: 700 35pt/20pt degular-display, sans-serif;
+    }
+    .widget {
+        width: 100%;
+    }
+    .widget-container {
+        flex-direction: column;
+        gap: var(--space-full);
+    }
+    .widget-description {
+        margin-left: 0;
+        max-width: 100%;
+    }
 }

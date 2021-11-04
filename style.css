@@ -104,7 +104,7 @@ a {
 }
 
 h1 {
-    font: 300 50pt/42pt degular-display, sans-serif;
+    font: 300 50pt/50pt degular-display, sans-serif;
 }
 
 select {
@@ -115,6 +115,10 @@ select {
     font: 600 14px "degular-text";
     -webkit-appearance: none;
     appearance: none;
+}
+
+button, input {
+    color: var(--widget-foreground);
 }
 
 .lesson {
@@ -185,6 +189,7 @@ select {
     font-family: degular-text, sans-serif;
     font-weight: 500;
     font-size: 14pt;
+    color: var(--widget-foreground);
 }
 
 .widget-header {

@@ -71,7 +71,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-gap: 60px;
-    width: 100%
+    width: 100%;
 }
 
 body {
@@ -213,9 +213,9 @@ button, input {
 .widget-code {
     font-size: 12px;
     font-weight: 600;
-    padding: 2px 8px;
+    padding: 1px 8px 4px 8px;
     border-radius: 5px;
-    display: none;
+    font: 00 10pt degular, sans-serif;
 }
 
 .widget-input-label {

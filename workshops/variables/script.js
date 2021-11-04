@@ -118,20 +118,3 @@ ___.onclick = function() {
     characterInput.value = "";  // Clear the input
 };
 */
-
-
-
-/* REMOVE THIS FROM THE STUDENT VERSION */
-
-let stringerParagraph = document.querySelector("#stringer-string");
-
-document.querySelector("#stringer-input-button-add").onclick = function() {
-  stringerString += characterInput.value;
-  stringerParagraph.innerHTML = stringerString;
-  characterInput.value = "";
-}
-
-document.querySelector("#stringer-input-button-clear").onclick = function() {
-  stringerString = "";
-  stringerParagraph.innerHTML = "";
-}

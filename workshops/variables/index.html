@@ -1,97 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css"> <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" type="module"></script>
-  <title>Selecting Buttons</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css">
+    <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
+    <link rel="stylesheet" href="/style.css">
+    <title>Selecting HTML</title>
 </head>
+
 <body>
-  
-  <header class="page-header">
-    <h1 class="page-title">Selecting Buttons</h1>
-    <p class="page-subtitle">An introduction to web interactivity by <span id="student-name">??? </span>.</p>
-  </header>
-  
-  <main>
-    
-     <!-- Counter -->
-    <article id="counter" class="widget-container">
 
-      <section class="green widget shadow-medium rounded">
-        <header class="widget-header">
-          <h3 class="widget-title">Counter</h3>
-        </header>
+    <header class="page-header">
+        <h1 class="page-title">Selecting HTML</h1>
+    </header>
 
-        <section id="counter-body" class="widget-body">
-          <p id="counter-body-number">0</p>
-          
-          <section id="counter-body-buttons">
-            <button class="counter-body-button rounded shadow-small" id="counter-body-button-increment">+</button>
-            <button class="counter-body-button rounded shadow-small" id="counter-body-button-decrement">–</button>  
-          </section>
-        </section>
-      </section>
-
-      <aside class="widget-description">
-        <h2>Exercise 1 – A Counter</h2>
-        <p>The counter stores the number in the variable <code>counterNumber</code>, updating it when the user clicks the buttons. We select the buttons using <code>document.QuerySelector()</code> & assign them to a variable each.</p>
-      </aside>
-
-    </article>
-
-    <!-- Juggler -->
-    <article id="juggler" class="widget-container">
-
-      <section class="blue widget shadow-medium rounded">
-        <header class="widget-header">
-          <h3 class="widget-title">juggler</h3>
-        </header>
-        
-        <section id="juggler-body" class="widget-body">
-          <button class="juggler-body-button rounded shadow-small" id="juggler-body-button-first">First</button>
-          <button class="juggler-body-button rounded shadow-small" id="juggler-body-button-second">Second</button>  
-        </section>
-      </section>
-
-      <aside class="widget-description">
-        <h2>Exercise 2 – The Juggler</h2>
-        <p>The juggler should store store a "ball" variable (a <code>string</code>) which is "juggles" from button to button. Clicking on the first button should send it over to the second one, and vice versa.</p>
-      </aside>
-
-    </article>
-
-    <!-- Juggler -->
-    <article id="stringer" class="widget-container">
-
-      <section class="yellow widget shadow-medium rounded">
-        <header class="widget-header">
-          <h3 class="widget-title">Stringer</h3>
-        </header>
-        
-        <section id="stringer-body" class="widget-body">
-          <p id="stringer-string">S</p>
-          <section id="stringer-input">
-            <div class="stringer-input-letter">
-              <label for="stringer-text">Single character input field?!</label>
-              <input type="text" name="stringer-text" id="stringer-input-character" maxlength="1" class="stringer-input-text">
-            </div>
-            <div id="stringer-input-buttons">
-              <button class="stringer-body-button rounded shadow-small" id="stringer-input-button-add">Add</button>
-              <button class="stringer-body-button" id="stringer-input-button-clear">Clear</button>      
-            </div>
-          </section>
-        </section>
-      </section>
-
-      <aside class="widget-description">
-        <h2>Exercise 3 – Stringer</h2>
-        <p>The stringer is a very, very inefficent kind of input field whose primary purpose is to annoy the user. You are only able to input a single character at a time using het text field and the add button. The clear button should reset both the string being displayed.</p>
-      </aside>
-
-    </article>
-    
-  </main>
+    <main>
+        <nav id="index-nav">
+            <ol>
+                <li><a href="/01_counter/index.html">Counter</a></li>
+                <li><a href="/02_juggler/index.html">Juggler</a></li>
+                <li><a href="/03_stringer/index.html">Stringer</a></li>
+            </ol>
+        </nav>
+    </main>
 </body>
+
 </html>

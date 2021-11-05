@@ -12,13 +12,13 @@ const buttonIncrement = document.querySelector("#counter-body-button-increment")
 const buttonDecrement = document.querySelector("#counter-body-button-decrement");
 const counterNumber = document.querySelector("#counter-body-number");
 
-buttonIncrement.addEventListener("click", () => {
+buttonIncrement.addEventListener("pointerdown", () => {
   const oldNumber = Number.parseInt(counterNumber.innerHTML);
   const newNumber = oldNumber + 1;
   counterNumber.innerHTML = newNumber;
 });
 
-buttonDecrement.addEventListener("click", () => {
+buttonDecrement.addEventListener("pointerdown", () => {
   const oldNumber = Number.parseInt(counterNumber.innerHTML);
   const newNumber = oldNumber - 1;
   counterNumber.innerHTML = newNumber;
@@ -93,20 +93,21 @@ const addTodoItem = (event) => {
   if (event.type === "keyup" && !(event.keyCode === 13)) return;
 
   const itemText = addTodoInput.value;
+  if (itemText.length === 0) return;
   const newListItem = document.createElement("li");
   newListItem.innerHTML = itemText;
-  newListItem.addEventListener("click", removeTodoItem);
+  newListItem.addEventListener("pointerdown", removeTodoItem);
 
   todoList.append(newListItem);
   addTodoInput.value = ""; // Reset the input field
 };
 
-addTodoButton.addEventListener("click", addTodoItem);
+addTodoButton.addEventListener("pointerdown", addTodoItem);
 addTodoInput.addEventListener("keyup", addTodoItem);
 
 // Add the eventLister to the placeholders
 for (const todoItem of todoList.children) {
-  todoItem.addEventListener("click", removeTodoItem);
+  todoItem.addEventListener("pointerdown", removeTodoItem);
 }
 
 

@@ -8,38 +8,38 @@
 
 /* Varirables - Counter */
 
-let buttonIncrement = document.querySelector("#counter-body-button-increment");
-let buttonDecrement = document.querySelector("#counter-body-button-decrement");
-let counterNumber = document.querySelector("#counter-body-number");
+const buttonIncrement = document.querySelector("#counter-body-button-increment");
+const buttonDecrement = document.querySelector("#counter-body-button-decrement");
+const counterNumber = document.querySelector("#counter-body-number");
 
-buttonIncrement.addEventListener("click", function () {
-    let oldNumber = Number.parseInt(counterNumber.innerHTML);
-    let newNumber = oldNumber + 1;
+buttonIncrement.addEventListener("click", () => {
+    const oldNumber = Number.parseInt(counterNumber.innerHTML);
+    const newNumber = oldNumber + 1;
     counterNumber.innerHTML = newNumber;
 });
 
-buttonDecrement.addEventListener("click", function () {
-    let oldNumber = Number.parseInt(counterNumber.innerHTML);
-    let newNumber = oldNumber - 1;
+buttonDecrement.addEventListener("click", () => {
+    const oldNumber = Number.parseInt(counterNumber.innerHTML);
+    const newNumber = oldNumber - 1;
     counterNumber.innerHTML = newNumber;
 });
 
 
 /* Conditions - Form Validation */
 
-let inputUsername = document.querySelector("#form-validation-username");
-let feedbackUsername = document.querySelector("#form-validation-feedback-username");
+const inputUsername = document.querySelector("#form-validation-username");
+const feedbackUsername = document.querySelector("#form-validation-feedback-username");
 let usernameCorrect = false;
 
-let inputPassword = document.querySelector("#form-validation-password");
-let feedbackPassword = document.querySelector("#form-validation-feedback-password");
+const inputPassword = document.querySelector("#form-validation-password");
+const feedbackPassword = document.querySelector("#form-validation-feedback-password");
 let passwordCorrect = false;
 
-let inputSubmit = document.querySelector("#form-validation-submit");
+const inputSubmit = document.querySelector("#form-validation-submit");
 
 // The username input
-inputUsername.addEventListener("input", function (event) {
-    let userInput = event.target.value; // This is how we get the thing the user changed.
+inputUsername.addEventListener("input", (event) => {
+    const userInput = event.target.value; // This is how we get the thing the user changed.
 
     if (userInput.length < 5) {
         feedbackUsername.classList.add("widget-input-error");
@@ -57,8 +57,8 @@ inputUsername.addEventListener("input", function (event) {
 });
 
 // The password input
-inputPassword.addEventListener("input", function (event) {
-    let userInput = event.target.value;
+inputPassword.addEventListener("input", (event) => {
+    const userInput = event.target.value;
 
     if (userInput.length < 10 || userInput.length > 20) {
         feedbackPassword.classList.add("widget-input-error");
@@ -79,69 +79,69 @@ inputPassword.addEventListener("input", function (event) {
 
 /* Functions - DOM Manipulation */
 
-let addTodoButton = document.querySelector("#dom-manipulation-input-button");
-let addTodoInput = document.querySelector("#dom-manipulation-input-text");
-let todoList = document.querySelector("#dom-manipulation-todo-list");
+const addTodoButton = document.querySelector("#dom-manipulation-input-button");
+const addTodoInput = document.querySelector("#dom-manipulation-input-text");
+const todoList = document.querySelector("#dom-manipulation-todo-list");
 
-function removeTodoItem(event) {
+const removeTodoItem = (event) => {
     let item = event.target;
     item.remove();
-}
+};
 
-function addTodoItem(event) {
+const addTodoItem = (event) => {
     // If the event is a a keyboard input and it is anything but the enter key, return
     if (event.type === "keyup" && !(event.keyCode === 13)) return;
 
-    let itemText = addTodoInput.value;
-    let newListItem = document.createElement("li");
+    const itemText = addTodoInput.value;
+    const newListItem = document.createElement("li");
     newListItem.innerHTML = itemText;
     newListItem.addEventListener("click", removeTodoItem);
 
     todoList.append(newListItem);
     addTodoInput.value = ""; // Reset the input field
-}
+};
 
 addTodoButton.addEventListener("click", addTodoItem);
 addTodoInput.addEventListener("keyup", addTodoItem);
 
 // Add the eventLister to the placeholders
-for (let todoItem of todoList.children) {
+for (const todoItem of todoList.children) {
     todoItem.addEventListener("click", removeTodoItem);
 }
 
 
 /* Arrays & Loops */
 
-// Start of cryptic(?) helper functions:
+// Start of cryptic helper functions:
 
 // Equation source: https://maketintsandshades.com/about
 // The numbers are allowed to overshoot as most browsers handle >255 as 255.
-function tintRGBColor(RGBColor, amount) {
+const tintRGBColor = (RGBColor, amount) => {
     return [
         Math.floor(Number.parseInt(RGBColor[0]) + ((255 - 102) * amount)),
         Math.floor(Number.parseInt(RGBColor[1]) + ((255 - 51) * amount)),
         Math.floor(Number.parseInt(RGBColor[2]) + ((255 - 153) * amount))
     ];
-}
+};
 
-function RGBString(RGBColor) {
+const RGBString = (RGBColor) => {
     return "rgb(" + RGBColor[0] + ", " + RGBColor[1] + ", " + RGBColor[2] + ")";
-}
+};
 
 // End of cryptic helper functions.
 
-let colorInputs = document.querySelectorAll(".color-generator-input");
-let colorSwatches = document.querySelectorAll(".color-generator-swatch");
+const colorInputs = document.querySelectorAll(".color-generator-input");
+const colorSwatches = document.querySelectorAll(".color-generator-swatch");
 let RGBColor = ["50", "50", "110"];
 
 // Listen for input-events on all of the color.
 for (let i = 0; i < colorInputs.length; i++) {
-    colorInputs[i].addEventListener("input", function (event) {
+    colorInputs[i].addEventListener("input", (event) => {
         RGBColor[i] = event.target.value, 255; // handle >255 user inputs
 
         let amount = 0.1;
-        for (let colorSwatch of colorSwatches) {
-            let nextTint = tintRGBColor(RGBColor, amount);
+        for (const colorSwatch of colorSwatches) {
+            const nextTint = tintRGBColor(RGBColor, amount);
             colorSwatch.style.backgroundColor = RGBString(nextTint);
             amount += 0.2;
         }
@@ -151,8 +151,8 @@ for (let i = 0; i < colorInputs.length; i++) {
 // Run the tinting once to get the starting colors
 {
     let amount = 0.1;
-    for (let colorSwatch of colorSwatches) {
-        let nextTint = tintRGBColor(RGBColor, amount);
+    for (const colorSwatch of colorSwatches) {
+        const nextTint = tintRGBColor(RGBColor, amount);
         colorSwatch.style.backgroundColor = RGBString(nextTint);
         amount += 0.2;
     }
@@ -162,7 +162,7 @@ for (let i = 0; i < colorInputs.length; i++) {
 /* Objects - Dealing with Complex Data */
 
 // We represent our contact as a nested object created in literal form
-let contacts = {
+const contacts = {
     bill: {
         name: "Bill Buxton",
         workplace: "Microsoft Research",
@@ -193,10 +193,10 @@ let contacts = {
     },
 };
 
-let contactDropdown = document.querySelector("#contact-card-dropdown");
+const contactDropdown = document.querySelector("#contact-card-dropdown");
 
-contactDropdown.addEventListener("change", function (event) {
-    let selectedContact = contacts[event.target.value];
+contactDropdown.addEventListener("change", (event) => {
+    const selectedContact = contacts[event.target.value];
     document.querySelector("#contact-card-name").innerHTML = selectedContact.name;
     document.querySelector("#contact-card-workplace").innerHTML = selectedContact.workplace;
     document.querySelector("#contact-card-note").innerHTML = selectedContact.note;
@@ -207,34 +207,34 @@ contactDropdown.addEventListener("change", function (event) {
 
 /* Events - Manipulating Time */
 
-let draggable = document.querySelector("#event-header");
-let draggableWidget = document.querySelector("#event");
+const draggable = document.querySelector("#event-header");
+const draggableWidget = document.querySelector("#event");
 
-let draggableState = {
+const draggableState = {
     dragging: false,
     initial: { x: null, y: null },
     current: { x: null, y: null },
     offset: { x: 0, y: 0 },
 };
 
-function dragStart(event) {
+const dragStart = (event) => {
     event.preventDefault();
     draggableState.initial.x = event.clientX - draggableState.offset.x;
     draggableState.initial.y = event.clientY - draggableState.offset.y;
     draggableState.dragging = true;
-}
+};
 
-function dragEnd(event) {
+const dragEnd = (event) => {
     draggableState.initial.x = draggableState.current.x;
     draggableState.initial.y = draggableState.current.y;
     draggableState.dragging = false;
-}
+};
 
-function translateElement(vector2, element) {
+const translateElement = (vector2, element) => {
     element.style.transform = `translate3d(${vector2.x}px, ${vector2.y}px, 0)`;
-}
+};
 
-function drag(event) {
+const drag = (event) => {
     if (draggableState.dragging) {
         event.preventDefault();
 
@@ -246,7 +246,7 @@ function drag(event) {
 
         translateElement(draggableState.current, draggableWidget);
     }
-}
+};
 
 draggable.addEventListener("mousedown", dragStart);
 draggable.addEventListener("mouseup", dragEnd);

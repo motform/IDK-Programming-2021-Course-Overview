@@ -12,13 +12,15 @@ const buttonIncrement = document.querySelector("#counter-body-button-increment")
 const buttonDecrement = document.querySelector("#counter-body-button-decrement");
 const counterNumber = document.querySelector("#counter-body-number");
 
-buttonIncrement.addEventListener("pointerdown", () => {
+buttonIncrement.addEventListener("pointerdown", (event) => {
+  event.preventDefault();
   const oldNumber = Number.parseInt(counterNumber.innerHTML);
   const newNumber = oldNumber + 1;
   counterNumber.innerHTML = newNumber;
 });
 
-buttonDecrement.addEventListener("pointerdown", () => {
+buttonDecrement.addEventListener("pointerdown", (event) => {
+  event.preventDefault();
   const oldNumber = Number.parseInt(counterNumber.innerHTML);
   const newNumber = oldNumber - 1;
   counterNumber.innerHTML = newNumber;

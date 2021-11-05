@@ -172,6 +172,15 @@ button, input {
     box-shadow: 0.5px 0.5px 4.1px rgba(0, 0, 0, 0.01), 1.3px 1.3px 10.4px rgba(0, 0, 0, 0.015), 3px 3px 25px rgba(0, 0, 0, 0.02), 10px 10px 80px rgba(0, 0, 0, 0.03);
 }
 
+.shadow-active {
+    box-shadow: 1.4px 1.4px 3.2px rgba(0, 0, 0, 0.1),
+                3.3px 3.3px 7.7px rgba(0, 0, 0, 0.03),
+                6.3px 6.3px 14.1px rgba(0, 0, 0, 0.04),
+                11.2px 11.2px 23.9px rgba(0, 0, 0, 0.05),
+                20.9px 20.9px 40px rgba(0, 0, 0, 0.06),
+                50px 50px 80px rgba(0, 0, 0, 0.07);
+}
+
 /* Widget styling */
 
 .widget-container {
@@ -518,12 +527,15 @@ button, input {
 
 /* Event — Draggable Widget */
 
-#event .widget-header {
+#draggable {
+    transition: box-shadow 1s;
+}
+
+#draggable-header {
     background-color: var(--pink0);
     cursor: move;
 }
-
-#event-widget-body {
+#draggable-widget-body {
     margin-top: var( --space-half);
     font: 500 13px degular-text, sans-serif;
     text-transform: uppercase;

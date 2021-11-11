@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css">
+    <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="script.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>From Validation</title>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <a href="/">
+            <h1 class="page-title">Taking Desicions</h1>
+        </a>
+
+        <!-- Hamburger Menu -->
+
+    </header>
+
+    <aside class="hamburger-menu">
+
+    </aside>
+
+    <main>
+
+        <!-- Counter -->
+        <div class="widget-container">
+            <article id="form-validation" class="widget shadow-medium yellow rounded">
+                <header class="widget-header">
+                    <h3 class="widget-title">Form Validation</h3>
+
+                </header>
+                <section class="widget-body">
+                    <form id="form-validation-form" autocomplete="off">
+                        <div class="widget-input-group">
+                            <label class="widget-input-label" for="username">username</label>
+                            <input type="text" name="username" class="widget-input-text rounded  shadow-small"
+                                id="form-validation-username">
+                            <p class="widget-input-feedback" id="form-validation-feedback-username">Your
+                                username should be at least 5 characters.</p>
+                        </div>
+                        <div class="widget-input-group">
+                            <label class="widget-input-label" for="password">password</label>
+                            <input type="password" name="password" class="widget-input-text rounded  shadow-small"
+                                id="form-validation-password">
+                            <p class="widget-input-feedback" id="form-validation-feedback-password">Your
+                                password should be between 10 and 20 characters.</p>
+                        </div>
+                        <input type="button" value="Submit" class="widget-input-button-large rounded  shadow-small"
+                            id="form-validation-submit" disabled=true>
+                    </form>
+                </section>
+            </article>
+        </div>
+        <aside class="widget-description">
+            <p>Conditional statements let's us take desicions based on the state of the program, allowing us
+                to dynamically respond to user input.</p>
+        </aside>
+    </main>
+</body>
+
+</html>

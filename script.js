@@ -42,9 +42,11 @@ inputUsername.addEventListener("input", (event) => {
   const userInput = event.target.value; // This is how we get the thing the user changed.
 
   if (userInput.length < 5) {
+    inputUsername.classList.add("widget-input-error");
     feedbackUsername.classList.add("widget-input-error");
     usernameCorrect = false;
   } else {
+    inputUsername.classList.remove("widget-input-error");
     feedbackUsername.classList.remove("widget-input-error");
     usernameCorrect = true;
   }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css">
+    <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="script.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EULA, expert mode</title>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <a href="/">
+            <h1 class="page-title">Taking Desicions</h1>
+        </a>
+
+    </header>
+
+    <main>
+
+        <!-- EULA -->
+        <div>
+            <div class="widget-container">
+                <article id="eula" class="widget shadow-medium green rounded">
+                    <header class="widget-header">
+                        <h3 class="widget-title">Terms & Conditions</h3>
+                    </header>
+
+                    <section class="widget-body v-stack gap-full">
+                        <section id="eula-text">
+                            <!-- The text is set using JS. -->
+                        </section>
+
+                        <section id="eula-input" class="v-stack gap-half">
+                            <section class="v-stack gap-half">
+                                <label class="widget-input-label" for="eula-input">Repeat the EULA to confirm</label>
+                                <textarea id="eula-input-textarea" class="rounded shadow-medium" name="eula-input" rows="5"></textarea>
+                            </section>
+
+                            <p class="hide" id="eula-input-counter"></p>
+
+                            <section id="eula-input-buttons" class="h-stack">
+                                <button class="widget-input-button-small shadow-medium rounded" id="eula-button-cancel">Cancel</button>
+                                <button class="widget-input-button-small shadow-medium rounded" id="eula-button-confirm">Confirm</button>
+                            </section>
+                        </section>
+
+                </article>
+            </div>
+        </div>
+
+        <aside class="widget-description">
+            <p>Legal has decreed that we have to make sure that ours users indeed read the EULA, whatever it takes.</p>
+        </aside>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css">
+    <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="script.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Refactoring Disclosue</title>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <a href="/">
+            <h1 class="page-title">Manipulating the DOM</h1>
+        </a>
+    </header>
+    <main>
+
+        <!-- Disclosure -->
+        <div>
+            <div class="widget-container">
+                <article id="disclosure" class="widget shadow-medium red rounded">
+                    <header class="widget-header">
+                        <h3 class="widget-title">Disclosure</h3>
+
+                    </header>
+                    <section class="widget-body v-stack gap-half">
+                        <h2>Frequently asked questions</h2>
+
+                        <section id="disclosure-refund" class="disclosure v-stack gap-quarter">
+
+                            <section id="disclosure-refund-header" class="rounded disclosure-header shadow-medium">
+                                <h3 class="">What is your refund policy?</h3>
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="chevron-down"
+                                    id="disclosure-refund-chevron-down">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="chevron-up hide"
+                                    id="disclosure-refund-chevron-up">
+                                    <path fill-rule="evenodd"
+                                        d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                                </svg>
+                            </section>
+
+                            <p id="disclosure-refund-panel" class="disclosure-panel hide">If you're unhappy with your
+                                purchase for any reason, email us within 90 days and we'll refund you in full, no
+                                questions asked.</p>
+                        </section>
+
+
+                        <section id="disclosure-support" class="disclosure v-stack gap-quarter">
+
+                            <section id="disclosure-support-header" class="rounded disclosure-header shadow-medium">
+                                <h3 class="">Do you offer technical support?</h3>
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="chevron-down"
+                                    id="disclosure-support-chevron-down">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="chevron-up hide"
+                                    id="disclosure-support-chevron-up">
+                                    <path fill-rule="evenodd"
+                                        d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                                </svg>
+                            </section>
+
+                            <p id="disclosure-support-panel" class="disclosure-panel hide">We are unable to offer live
+                                technical support at this very moment, but feel free to contact a technician.</p>
+                        </section>
+                </article>
+            </div>
+        </div>
+
+        <aside class="widget-description">
+            <p>Disclosure type UIs allow the user to dynamically hide and show the relevant content. They are most often
+                used for Q&A style interfaces.</p>
+        </aside>
+    </main>
+</body>
+
+</html>

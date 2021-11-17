@@ -406,6 +406,12 @@ button {
 
 /* Disclosure */
 
+#disclosure .widget-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-half);
+}
+
 #disclosure h2 {
     margin-bottom: var(--space-half);
 }

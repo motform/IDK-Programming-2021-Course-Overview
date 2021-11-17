@@ -9,32 +9,32 @@
   0 - -45%
   1 - 0
   2 - 15%
-  3 - 40% 
+  3 - 20%
    */
     --green0: #b9f8c3;
     --green1: #80f391;
     --green2: #6dcf7b;
-    --green3: #4d9257;
+    --green3: #66c274;
     --yellow0: #fff7ae;
     --yellow1: #fff06c;
     --yellow2: #e6d861;
-    --yellow3: #999041;
+    --yellow3: #ccc056;
     --red0: #fdbbad;
     --red1: #fc846a;
     --red2: #d6705a;
-    --red3: #974f40;
+    --red3: #b05c4a;
     --blue0: #b5dbff;
     --blue1: #83C3FF;
     --blue2: #6fa6d9;
-    --blue3: #4f7599;
+    --blue3: #699ccc;
     --gray0: #efefef;
     --gray1: #e1e1e1;
     --gray2: #bfbfbf;
-    --gray3: #878787;
+    --gray3: #999999;
     --pink0: #ffa5e6;
     --pink1: #ff5cd1;
     --pink2: #d94eb2;
-    --pink3: #99377d;
+    --pink3: #cc4aa7;
     --error: #bf3618;
     --space-double: calc(var(--space-full) * 2);
     --space-full: 40px;
@@ -138,9 +138,17 @@ button {
     justify-content: space-between;
 }
 
-.gap-quarter { gap: var(--space-quarter); }
-.gap-half { gap: var(--space-half); }
-.gap-full { gap: var(--space-full); }
+.gap-quarter {
+    gap: var(--space-quarter);
+}
+
+.gap-half {
+    gap: var(--space-half);
+}
+
+.gap-full {
+    gap: var(--space-full);
+}
 
 .hide {
     display: none;
@@ -240,8 +248,8 @@ button {
     width: 100%;
     border: none;
     font: 600 14px "degular-text";
+    height: 40px;
     padding: var(--space-quarter);
-    margin: var(--space-quarter) 0;
 }
 
 .widget-input-feedback {
@@ -255,14 +263,16 @@ button {
 
 .widget-input-button-small {
     width: 100%;
+    max-width: 70px;
+    height: 40px;
     padding: var(--space-quarter);
     border: none;
     font: 500 12pt degular-text, sans-serif;
-    max-width: 100px;
 }
 
 .widget-input-button-large {
     width: 100%;
+    height: 40px;
     padding: var(--space-quarter);
     border: none;
     font: 500 12pt degular-text, sans-serif;
@@ -270,150 +280,165 @@ button {
 
 /* COLORS */
 
-.green {background-color: var(--green1);}
-.green .widget-header {background-color: var(--green0);}
-.green button {background-color: var(--green2);}
-.green button:hover {background-color: var(--green3);}
-.green input {background-color: var(--green2);}
+.green {
+    background-color: var(--green1);
+}
 
-.yellow {background-color: var(--yellow1);}
-.yellow .widget-header {background-color: var(--yellow0);}
-.yellow button {background-color: var(--yellow2);}
-.yellow button:hover {background-color: var(--yellow3);}
-.yellow input {background-color: var(--yellow);}
+.green .widget-header {
+    background-color: var(--green0);
+}
 
-.gray {background-color: var(--gray1);}
-.gray .widget-header {background-color: var(--gray0);}
-.gray button {background-color: var(--gray2);}
-.gray button:hover {background-color: var(--gray3);}
-.gray input {background-color: var(--gray);}
+.green button {
+    background-color: var(--green2);
+}
 
-.blue {background-color: var(--blue1);}
-.blue .widget-header {background-color: var(--blue0);}
-.blue button {background-color: var(--blue2);}
-.blue button:hover {background-color: var(--blue3);}
-.blue input {background-color: var(--blue);}
+.green button:hover {
+    background-color: var(--green3);
+}
 
-.red {background-color: var(--red1);}
-.red .widget-header {background-color: var(--red0);}
-.red button {background-color: var(--red2);}
-.red button:hover {background-color: var(--red3);}
-.red input {background-color: var(--red2);}
+.green input {
+    background-color: var(--green2);
+}
 
-.pink {background-color: var(--pink1);}
-.pink .widget-header {background-color: var(--pink0);}
-.pink button {background-color: var(--pink2);}
-.pink button:hover {background-color: var(--pink3);}
-.pink input {background-color: var(--pink2);}
+.yellow {
+    background-color: var(--yellow1);
+}
 
-/* Form Validation */
-
-#form-validation .widget-header {
+.yellow .widget-header {
     background-color: var(--yellow0);
 }
 
-#form-validation .widget-input-text {
+.yellow button {
     background-color: var(--yellow2);
 }
 
-#form-validation .widget-code:hover {
+.yellow button:hover {
     background-color: var(--yellow3);
 }
 
-#form-validation .widget-input-text:focus {
-    background-color: var(--yellow3);
-}
-
-#form-validation-feedback-password {
-    margin-bottom: var(--space-quarter);
-}
-
-#form-validation .widget-input-button-large {
+.yellow input {
     background-color: var(--yellow2);
-    margin-top: var(--space-full);
 }
 
-#form-validation .widget-input-button-large:hover {
-    background-color: var(--yellow3);
-    cursor: pointer;
+.gray {
+    background-color: var(--gray1);
 }
 
-#form-validation .widget-input-button-large:disabled {
-    background-color: var(--yellow2);
-    cursor: not-allowed;
+.gray .widget-header {
+    background-color: var(--gray0);
 }
 
-/* Hamburger menu */
-
-#hamburger-button {
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    z-index: 2;
-    cursor: pointer;
+.gray button {
+    background-color: var(--gray2);
 }
 
-.hamburger-icon {
-    height: 32px;
-    width: 32px;
+.gray button:hover {
+    background-color: var(--gray3);
 }
 
-#hamburger-menu {
-    font: 500 35px/40px degular-display, sans-serif;
-    display: none;
+.gray input {
+    background-color: var(--gray2);
 }
 
-#hamburger-menu-animated {
-    font: 500 35px/40px degular-display, sans-serif;
-    transition: transform .4s;
+.blue {
+    background-color: var(--blue1);
 }
 
-.hamburger-menu-position {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
+.blue .widget-header {
+    background-color: var(--blue0);
+}
+
+.blue button {
+    background-color: var(--blue2);
+}
+
+.blue button:hover {
+    background-color: var(--blue3);
+}
+
+.blue input {
+    background-color: var(--blue2);
+}
+
+.red {
+    background-color: var(--red1);
+}
+
+.red .widget-header {
+    background-color: var(--red0);
+}
+
+.red button {
+    background-color: var(--red2);
+}
+
+.red button:hover {
+    background-color: var(--red3);
+}
+
+.red input {
+    background-color: var(--red2);
+}
+
+.red input:focus {
+    background-color: var(--red3);
+}
+
+.pink {
+    background-color: var(--pink1);
+}
+
+.pink .widget-header {
+    background-color: var(--pink0);
+}
+
+.pink button {
+    background-color: var(--pink2);
+}
+
+.pink button:hover {
+    background-color: var(--pink3);
+}
+
+.pink input {
+    background-color: var(--pink2);
+}
+
+/* TODO List */
+
+#dom-manipulation-input {
+    align-items: flex-end;
+}
+
+#dom-manipulation-todo-list li {
     margin: 0;
-    top: 0;
-    left: 50%;
-    right: 0;
-}
-
-.hamburger-menu-hide {
-    transform: translate3d(+100vw, 0, 0);
-}
-
-.hamburger-menu-show {
-    transform: translate3d(0vw, 0, 0);
-}
-
-#hamburger-menu-items {
-    display: flex;
     list-style: none;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 8px 0 12px 3px;
+    font: 500 15px degular-text, sans-serif;
+    border: 2px solid var(--red2);
+    border-width: 0 0 2px 0;
 }
 
-#hamburger-menu-items li:hover {
-    font-weight: 800;
+#dom-manipulation-todo-list li:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#dom-manipulation-todo-list li:last-of-type {
+    border-width: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#dom-manipulation-todo-list li:hover {
+    text-decoration: line-through;
     cursor: pointer;
-}
-
-.hamburger-menu-items-bottom {
-    font: 500 16px/24px degular-text, sans-serif;
 }
 
 /* Disclosure */
 
 #disclosure h2 {
     margin-bottom: var(--space-half);
-}
-
-.disclosure {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-quarter);
 }
 
 .disclosure-header {
@@ -436,31 +461,6 @@ button {
 .disclosure-panel {
     font: 500 14px/20px degular-text, sans-serif;
     padding: 0 var(--space-quarter);
-}
-
-
-/* EULA */
-
-#eula-input-textarea {
-    background-color: var(--green0);
-    border: none;
-    resize: none;
-    padding: var(--space-half);
-    font: 500 14px/20px degular-text, sans-serif;
-}
-
-#eula-text {
-    transition: color 2s;
-    cursor: not-allowed;
-}
-
-#eula-text::selection {
-    background-color: var(--green0);
-    cursor: not-allowed;
-}
-
-.eula-dim {
-    color: var(--green1);
 }
 
 /* Responsive */

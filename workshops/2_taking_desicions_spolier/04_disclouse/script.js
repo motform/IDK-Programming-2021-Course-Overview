@@ -16,25 +16,23 @@ const refundPanel = document.querySelector("#disclosure-refund-panel");
 // If the user clicks the header:
 refundHeader.addEventListener("pointerdown", (event) => {
   // Check if `refundPanel` contains the class "hide"
-  /*
-    if (refundPanel.classList.contains(___)) {
+  if (refundPanel.classList.contains("hide")) {
     // If that is the case, we want to show the element by removing the hide class
-//    refundPanel.classList.remove(___);
+    refundPanel.classList.remove("hide");
     // We want to hide the chevron that points down (v)
-//    refundChevronDown.classList.add(___);
-    // And show the one that points up (^)
-//    refundChevronUp.classList.remove(___);
+    refundChevronDown.classList.add("hide");
+    // And show the one that ppoints up (^)
+    refundChevronUp.classList.remove("hide");
 
     // If `refundPanel` does not have the "hide" class, we want to close it
-   } else {
+  } else {
     // Hide the panel by adding the "hide" class
-//    refundPanel.___
+    refundPanel.classList.add("hide");
     // Show the downward pointing chevron (v)
-//    refundChevronDown.___
+    refundChevronDown.classList.remove("hide");
     // Hide the upward pointing one
-//    refundChevronUp.___
-    }
-  */
+    refundChevronUp.classList.add("hide");
+  }
 });
 
 /* Now do the same thing but with the support disclosure! This isi
@@ -49,7 +47,13 @@ const supportPanel = document.querySelector("#disclosure-support-panel");
 /* You will have to write all of this on your own, but remember,
    it is _very_ similiar to the first one. */
 supportHeader.addEventListener("pointerdown", (event) => {
-
-  // You can do it! :)
-
+  if (supportPanel.classList.contains("hide")) {
+    supportPanel.classList.remove("hide");
+    supportChevronDown.classList.add("hide");
+    supportChevronUp.classList.remove("hide");
+  } else {
+    supportPanel.classList.add("hide");
+    supportChevronDown.classList.remove("hide");
+    supportChevronUp.classList.add("hide");
+  }
 });

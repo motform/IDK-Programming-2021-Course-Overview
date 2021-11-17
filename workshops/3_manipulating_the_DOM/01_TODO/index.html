@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css">
+    <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="script.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TODO List</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <a href="/"><h1 class="page-title">Manipulating the DOM</h1></a>
+    </header>
+
+    <main>
+
+        <!-- TODO List -->
+        <div class="widget-container">
+            <article id="dom-manipulation" class="red widget shadow-medium rounded">
+                <header class="widget-header">
+                    <h3 class="widget-title">DOM Manipulation</h3>
+                </header>
+
+                <section class="widget-body v-stack gap-full">
+
+                    <section id="dom-manipulation-input" class="h-stack gap-half">
+                        <div class="v-stack gap-quarter">
+                            <label class="widget-input-label" for="todo-item">New TODO Item</label>
+                            <input type="text" name="todo-item" class="widget-input-text rounded shadow-small"
+                                   id="dom-manipulation-input-text">
+                        </div>
+                        <button class="widget-input-button-small rounded shadow-small"
+                                id="dom-manipulation-input-button">Add</button>
+                    </section>
+
+                    <section id="dom-manipulation-todo" class="v-stack gap-full">
+                        <ul id="dom-manipulation-todo-list">
+                            <li>Learn Javascript</li>
+                            <li>Burn Javascript</li>
+                        </ul>
+                    </section>
+                </section>
+            </article>
+        </div>
+
+        <aside class="widget-description">
+            <p>We can add and remove elements/nodes from the DOM programatically using <code>document.createElement</code> and <code>.append</code>.</p>
+        </aside>
+
+    </main>
+</body>
+
+</html>

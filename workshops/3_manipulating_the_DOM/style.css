@@ -3,7 +3,7 @@
     --widget-foreground: black;
     --background: white;
     --code-background: #efefef;
-    --blurred-background: #efefefaa;
+    --blurred-background: #ffffffaa;
     /* 
   Tints are Generated with https://noeldelgado.github.io/shadowlord/
   0 - -45%
@@ -30,12 +30,14 @@
     --gray0: #efefef;
     --gray1: #e1e1e1;
     --gray2: #bfbfbf;
-    --gray3: #999999;
+    --gray3: #ababab;
     --pink0: #ffa5e6;
     --pink1: #ff5cd1;
     --pink2: #d94eb2;
     --pink3: #cc4aa7;
     --error: #bf3618;
+    --error2: #ac3116;
+
     --space-double: calc(var(--space-full) * 2);
     --space-full: 40px;
     --space-half: calc(var(--space-full) / 2);
@@ -100,6 +102,12 @@ a {
     text-decoration: none;
 }
 
+p a {
+    border: 1px solid var(--foreground);
+    border-width: 0 0 1px 0;
+    padding-bottom: 3px;
+}
+
 .page-header {
     margin-bottom: var(--space-double);
     display: flex;
@@ -122,6 +130,11 @@ code {
 
 button {
     cursor: pointer;
+    background-color: var(--gray2);
+}
+
+button:hover {
+    background-color: var(--gray3);
 }
 
 /* Helpers */
@@ -262,10 +275,9 @@ button {
 }
 
 .widget-input-button-small {
-    width: 100%;
-    max-width: 70px;
+    max-width: 100px;
     height: 40px;
-    padding: var(--space-quarter);
+    padding: var(--space-quarter) var(--space-half);
     border: none;
     font: 500 12pt degular-text, sans-serif;
 }
@@ -273,7 +285,7 @@ button {
 .widget-input-button-large {
     width: 100%;
     height: 40px;
-    padding: var(--space-quarter);
+    padding: var(--space-quarter) var(--space-half);
     border: none;
     font: 500 12pt degular-text, sans-serif;
 }
@@ -404,6 +416,15 @@ button {
     background-color: var(--pink2);
 }
 
+.button-destructive {
+    background: linear-gradient(180deg, #c54a2f, #be4328, #b83d22, #b2371c, #ac3116);
+    color: white;
+}
+
+.button-destructive:hover {
+    background: linear-gradient(180deg, #ac3116, #a22e14, #992b13, #8f2812, #862611);
+}
+
 /* TODO List */
 
 #dom-manipulation-input {
@@ -461,6 +482,57 @@ button {
 .disclosure-panel {
     font: 500 14px/20px degular-text, sans-serif;
     padding: 0 var(--space-quarter);
+}
+
+/* Modal */ 
+
+.modal {
+    padding: var(--space-half);
+    text-align: center;
+    align-items: center;
+    font-weight: 600;
+
+    border: 1px solid #ffffffaa;
+    border-width: 1px 0 0 0;
+
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 300px;
+}
+
+.modal-dimmer {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+    background-color: #00000066;
+}
+
+.modal * {
+    width: 100%;
+}
+
+.modal-text {
+    max-width: 220px;
+}
+
+.modal-sub-text {
+    font: 500 13px "degular-text";
+}
+
+.modal-icon {
+    height: 64px;
+    width: 64px;
+    margin-top: var(--space-eight);
 }
 
 /* Responsive */

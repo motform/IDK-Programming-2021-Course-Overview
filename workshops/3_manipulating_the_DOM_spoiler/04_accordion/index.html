@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css">
+        <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/04_accordion/style.css">
+        <script src="script.js" type="module"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>DIY Accordion</title>
+    </head>
+
+    <body>
+
+        <header class="page-header">
+            <a href="/"><h1 class="page-title">Manipulating the DOM</h1></a>
+        </header>
+
+        <main>
+
+            <!-- Accordion -->
+            <div>
+                <div class="widget-container">
+                    <article id="accordion" class="widget shadow-medium blue rounded">
+                        <header class="widget-header">
+                            <h3 class="widget-title">Accordion</h3>
+                        </header>
+
+
+                        <section id="accordion-body" class="widget-body v-stack gap-half">
+
+                            <!-- This is where you add your HTML -->
+                            <section id="accordions" class="v-stack gap-quarter gray rounded">
+
+                                <!-- First accordion -->
+                                <article class="accordion v-stack rounded shadow-medium" id="accordion-1">
+                                    <header class="accordion-header h-stack rounded">
+                                        <h3>Who plays the accordion?</h3>
+                                        <div class="chevron-container">
+                                            <img src="chevron-up.svg" class="chevron-up hide" />
+                                            <img src="chevron-down.svg" class="chevron-down" />
+                                        </div>
+                                    </header>
+
+                                    <section class="accordion-panel hide">
+                                        <p>The accordion is played mainly by musicians, but is also known to frequent other circles of society. In 2020, over half of all newly produced accordions where sold to hobby taxidermists.</p>
+                                    </section>
+                                </article>
+
+                                <!-- Second accordion -->
+                                <article class="accordion v-stack rounded shadow-medium" id="accordion-2">
+                                    <header class="accordion-header h-stack rounded ">
+                                        <h3>Who plays the accordion?</h3>
+                                        <div class="chevron-container">
+                                            <img src="chevron-up.svg" class="chevron-up hide" />
+                                            <img src="chevron-down.svg" class="chevron-down" />
+                                        </div>
+                                    </header>
+
+                                    <section class="accordion-panel hide">
+                                        <p>The accordion is played mainly by musicians, but is also known to frequent other circles of society. In 2020, over half of all newly produced accordions where sold to hobby taxidermists.</p>
+                                    </section>
+                                </article>
+
+                                <!-- Third accordion -->
+                                <article class="accordion v-stack rounded shadow-medium" id="accordion-3">
+                                    <header class="accordion-header h-stack rounded ">
+                                        <h3>Who plays the accordion?</h3>
+                                        <div class="chevron-container">
+                                            <img src="chevron-up.svg" class="chevron-up hide" />
+                                            <img src="chevron-down.svg" class="chevron-down" />
+                                        </div>
+                                    </header>
+
+                                    <section class="accordion-panel hide">
+                                        <p>The accordion is played mainly by musicians, but is also known to frequent other circles of society. In 2020, over half of all newly produced accordions where sold to hobby taxidermists.</p>
+                                    </section>
+                                </article>
+
+                            </section>
+
+                            <!-- This is the end of where you add your HMTL -->
+                        </section>
+
+
+                    </article>
+                </div>
+            </div>
+
+            <aside class="widget-description">
+                <p>Your task is to model an accordion, a kind of disclosure element that only allows for one thing to be visible at the time. You can look to the Disclosure task for reference and visit the <a href="https://www.radix-ui.com/docs/primitives/components/accordion">Radix docs</a> for a live example.</p>
+            </aside>
+        </main>
+    </body>
+
+</html>

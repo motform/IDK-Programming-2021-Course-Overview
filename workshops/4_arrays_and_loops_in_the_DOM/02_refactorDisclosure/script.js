@@ -59,3 +59,21 @@ supportHeader.addEventListener("pointerdown", (event) => {
  *
  */
 
+const addDisclosureCallback = (disclosureContainer) => {
+  const header      = disclosureContainer.querySelector(".disclosure-header");
+  const chevronUp   = disclosureContainer.querySelector(".chevron-up");
+  const chevronDown = disclosureContainer.querySelector(".chevron-down");
+  const panel       = disclosureContainer.querySelector(".disclosure-panel");
+
+  header.addEventListener("pointerdown", (event) => {
+    if (panel.classList.contains("hide")) {
+      panel.classList.remove("hide");
+      chevronDown.classList.add("hide");
+      chevronUp.classList.remove("hide");
+    } else {
+      panel.classList.add("hide");
+      chevronDown.classList.remove("hide");
+      chevronUp.classList.add("hide");
+    }
+  });
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css">
+    <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="script.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Color Generator</title>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <a href="/">
+            <h1 class="page-title">Arrays, Loops & the DOM</h1>
+        </a>
+    </header>
+
+    <main>
+
+        <!-- Color generator -->
+        <div>
+            <div class="widget-container">
+                <article id="color-generator" class="widget shadow-medium gray rounded">
+                    <header class="widget-header">
+                        <h3 class="widget-title">Accordion</h3>
+                    </header>
+
+                    <section class="widget-body gap-quarter v-stack">
+                        <div id="color-generator-picker" class="h-stack">
+                            <section id="color-generator-inputs" class="v-stack gap-quarter">
+                                <div class="v-stack gap-eight">
+                                    <label class="widget-input-label" for="red">Red</label>
+                                    <input min="0" max="255" type="range" name="red"
+                                        class="color-generator-input rounded shadow-small" value="50" step="1">
+                                </div>
+                                <div class="v-stack gap-eight">
+                                    <label class="widget-input-label" for="green">Green</label>
+                                    <input min="0" max="255" type="range" name="green"
+                                        class="color-generator-input rounded shadow-small" value="50" step="1">
+                                </div>
+                                <div class="v-stack gap-eight">
+                                    <label class="widget-input-label" for="blue">Blue</label>
+                                    <input min="0" max="255" type="range" name="blue"
+                                        class="color-generator-input rounded shadow-small" value="110" step="1">
+                                </div>
+                            </section>
+                            <div class="color-generator-swatch shadow-medium" id="color-generator-primary-color">
+                            </div>
+                        </div>
+
+                        <section id="color-generator-swatches">
+                            <div class="color-generator-swatch shadow-medium"></div>
+                            <div class="color-generator-swatch shadow-medium"></div>
+                            <div class="color-generator-swatch shadow-medium"></div>
+                            <div class="color-generator-swatch shadow-medium"></div>
+                        </section>
+                    </section> <!-- end of Color Generator -->
+
+                </article>
+            </div>
+        </div>
+
+        <aside class="widget-description">
+            <p>Your task is to model an accordion, a kind of disclosure element that only allows for one thing to be
+                visible at the time. You can look to the Disclosure task for reference and visit the <a
+                    href="https://www.radix-ui.com/docs/primitives/components/accordion">Radix docs</a> for a live
+                example.</p>
+        </aside>
+    </main>
+</body>
+
+</html>

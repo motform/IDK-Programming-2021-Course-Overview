@@ -1,0 +1,53 @@
+/* This is a complementary stylesheet to the one used by all of the
+   pages, where you can add your own definitions. */
+
+:root {
+    --blue0: #b5dbff;
+    --blue1: #83C3FF;
+    --blue2: #6fa6d9;
+    --blue3: #699ccc;
+    --blue4: #5c89b3;
+
+    --gray0: #efefef;
+    --gray1: #e1e1e1;
+    --gray2: #bfbfbf;
+    --gray3: #ababab;
+    --gray4: #bababa;
+
+    --space-double: calc(var(--space-full) * 2);
+    --space-full: 40px;
+    --space-half: calc(var(--space-full) / 2);
+    --space-quarter: calc(var(--space-full) / 4);
+    --space-eight: calc(var(--space-full) / 8);
+}
+
+#accordions {
+    padding: var(--space-quarter);
+}
+
+.accordion {
+    background-color: var(--gray2);
+}
+
+.accordion-header {
+    padding: var(--space-quarter);
+    cursor: pointer;
+    align-items: center;
+}
+
+.accordion-header:hover {
+    background-color: var(--gray3);
+}
+
+.accordion-header h3 {
+    font: 700 14px/20px degular-text, sans-serif;
+}
+
+.accordion-panel {
+    padding: var(--space-quarter);
+}
+
+.chevron-container {
+    height: 16px;
+}
+

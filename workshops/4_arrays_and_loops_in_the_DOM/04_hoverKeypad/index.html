@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.typekit.net/buv6ook.css">
     <!-- If you have inherited this code, go to fonts.adobe.com and make a webfont for the entirety of Degular by OhNo (https://fonts.adobe.com/fonts/degular) -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css"> <!-- The global CSS File -->
+    <link rel="stylesheet" href="style.css"> <!-- The local CSS File -->
     <script src="script.js" type="module"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Tabs</title>
+    <title>Hover Keyboard</title>
 </head>
 
 <body>
@@ -23,25 +24,25 @@
         <!-- Tabs -->
         <div>
             <div class="widget-container">
-                <article id="tabs" class="widget shadow-medium blue rounded">
+                <article id="hover-keyboard" class="widget shadow-medium yellow rounded">
                     <header class="widget-header">
-                        <h3 class="widget-title">Tabs</h3>
+                        <h3 class="widget-title">Hover Keyboard</h3>
                     </header>
 
-                    <section class="widget-body v-stack gap-half">
-                        <section class="tab-container gray rounded shadow-medium">
-                            <header id="tab-triggers" class="h-stack"></header>
-                            <section id="tab-panels"></section>
+                    <section class="widget-body v-stack gap-full">
+                        <section id="keypad-display-container" class="v-stack gap-quarter">
+                            <label class="widget-input-label">Enter your phone number</label>
+                            <p id="keypad-display" class="rounded shadow-medium"></p>
                         </section>
+                        <article id="keypad"></article>
                     </section>
                 </article>
             </div>
         </div>
 
         <aside class="widget-description">
-            <p>Tab interfaces are commmon when we want selective disclosure of larger sections of information, often
-                some kind of logical sub-divison of the program. For a live example, see the <a
-                    href="https://www.radix-ui.com/docs/primitives/components/tabs">Radix docs</a>.</p>
+            <p>Keypads are useful, but clicking is such a thing of the past. Get with the times, make a cool hover input
+                system instead.</p>
         </aside>
     </main>
 </body>

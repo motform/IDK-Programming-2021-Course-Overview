@@ -1,0 +1,41 @@
+#keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--space-half);
+}
+
+.keypad-key {
+    grid-row: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: var(--space-eight);
+    background-color: var(--yellow0);
+    text-align: center;
+    cursor: crosshair;
+    font-size: 20px;
+}
+
+.keypad-clear {
+    grid-column: 1/4;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--yellow0);
+}
+
+.keypad-clear:last-of-type {
+    display: none;
+}
+
+.keypad-key:hover {
+    background-color: var(--yellow2);
+}
+
+#keypad-display {
+    background-color: var(--yellow0);
+    font: 700 20px/20px covik-sans-mono, monospace;
+    padding: var(--space-half);
+    min-height: 60px;
+}

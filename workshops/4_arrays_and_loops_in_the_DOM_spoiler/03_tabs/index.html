@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style.css">
     <script src="script.js" type="module"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Hover Keyboard</title>
+    <title>Tabs</title>
 </head>
 
 <body>
@@ -23,14 +23,16 @@
         <!-- Tabs -->
         <div>
             <div class="widget-container">
-                <article id="hover-keyboard" class="widget shadow-medium yellow rounded">
+                <article id="tabs" class="widget shadow-medium blue rounded">
                     <header class="widget-header">
-                        <h3 class="widget-title">Hover Keyboard</h3>
+                        <h3 class="widget-title">Tabs</h3>
                     </header>
 
                     <section class="widget-body v-stack gap-half">
-                        <header id="tab-triggers"></header>
-                        <header id="tab-panels"></header>
+                        <section class="tab-container gray rounded shadow-medium">
+                            <header id="tab-triggers" class="h-stack"></header>
+                            <section id="tab-panels"></section>
+                        </section>
                     </section>
                 </article>
             </div>
@@ -38,7 +40,8 @@
 
         <aside class="widget-description">
             <p>Tab interfaces are commmon when we want selective disclosure of larger sections of information, often
-                some kind of logical sub-divison of the program.</p>
+                some kind of logical sub-divison of the program. For a live example, see the <a
+                    href="https://www.radix-ui.com/docs/primitives/components/tabs">Radix docs</a>.</p>
         </aside>
     </main>
 </body>
